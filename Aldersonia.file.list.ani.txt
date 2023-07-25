@@ -1,0 +1,4 @@
+Aldersonia_kunmingensis-GCA_001646865.1_rk21_contig.fna	Aldersonia_kunmingensis-GCA_001646865.1_rk21_contig.fna	100	1695	1710
+Aldersonia_kunmingensis-GCA_001646865.1_rk21_contig.fna	Aldersonia_kunmingensis-GCF_001646865.1_rk21_contig.fna	100	1695	1710
+Aldersonia_kunmingensis-GCF_001646865.1_rk21_contig.fna	Aldersonia_kunmingensis-GCA_001646865.1_rk21_contig.fna	100	1695	1710
+Aldersonia_kunmingensis-GCF_001646865.1_rk21_contig.fna	Aldersonia_kunmingensis-GCF_001646865.1_rk21_contig.fna	100	1695	1710
