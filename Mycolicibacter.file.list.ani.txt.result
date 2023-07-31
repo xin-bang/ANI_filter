@@ -1,0 +1,3 @@
+Bact_name	Contig	Best_match	Best_match_ANI	result
+Mycolicibacter_nonchromogenicus	GCA_001050055.1_Mycobacterium_nonchromogenicum_strain_NCK_8460_scaff.fna	Mycolicibacter_acidiphilus-GCA_018455725.1_ASM1845572v1_contig.fna	79.403	no match
+Mycolicibacter_senuensis	GCA_003284925.1_ASM328492v1_contig.fna	Mycolicibacter_sinensis-GCA_000214155.1_ASM21415v1_genomic.fna	94.334	no match
