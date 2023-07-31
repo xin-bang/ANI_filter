@@ -1,0 +1,5 @@
+Bact_name	Contig	file1	ANI	Min_ANI	Best_match	Best_match_ANI	result
+Williamsia_herbipolensis	GCA_015069685.1_ASM1506968v1_scaff.fna	Williamsia_herbipolensis-GCA_000964005.1_WiARP1.0_contig.fna	80.6663	81.8745670162756	Williamsia_serinedens-GCA_024171725.1_ASM2417172v1_scaff.fna	97.6163	no match
+Williamsia_herbipolensis	GCA_000964005.1_WiARP1.0_contig.fna	Williamsia_herbipolensis-GCA_015069685.1_ASM1506968v1_scaff.fna	80.8245	81.8745670162756	Williamsia_herbipolensis-GCF_000964005.1_WiARP1.0_contig.fna	100.0	match
+Williamsia_herbipolensis	GCF_000964005.1_WiARP1.0_contig.fna	Williamsia_herbipolensis-GCA_015069685.1_ASM1506968v1_scaff.fna	80.8245	81.8745670162756	Williamsia_herbipolensis-GCA_000964005.1_WiARP1.0_contig.fna	100.0	match
+Williamsia_herbipolensis	GCA_015069685.1_ASM1506968v1_scaff.fna	Williamsia_herbipolensis-GCF_000964005.1_WiARP1.0_contig.fna	80.6663	81.8745670162756	Williamsia_serinedens-GCA_024171725.1_ASM2417172v1_scaff.fna	97.6163	no match

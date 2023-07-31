@@ -11,6 +11,8 @@ parser = argparse.ArgumentParser(
     For example: python {sys.argv[0]} -i input.fasta -o output")
 parser.add_argument("-i",type=str,
     help="the result from FastANI")
+parser.add_argument("-l",type=str,
+    help="the log result from each FastANI file calculate")   
 parser.add_argument("-o",type=str,
     help="the filter result which may represent different species")
 args = parser.parse_args()
@@ -91,7 +93,22 @@ if __name__ == "__main__":
     data = load_data(file_path)
     result_data = filter_data(data)
 
-    with open(args.o, 'w') as file:
-        file.write("Bact_name\tContig\tfile1\tANI\tMin_ANI\tBest_match\tBest_match_ANI\tresult\n")
+    with open(args.l, 'w') as log:
+        log.write("Bact_name\tContig\tfile1\tANI\tMin_ANI\tBest_match\tBest_match_ANI\tresult\n")
         for row in result_data:
-            file.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(row[0], row[1], row[2],row[3],row[4],row[5],row[6],row[7]))
+            log.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(row[0], row[1], row[2],row[3],row[4],row[5],row[6],row[7]))
+
+    #写入数据的去重操作
+    written_data = set() # 创建一个空的集合，用于记录已写入的数据
+
+    with open(args.o, "w") as file:
+        file.write("Bact_name\tContig\tBest_match\tBest_match_ANI\tresult\n")
+        for uniq_row in result_data:
+            match_result = "{}".format(uniq_row[7])
+            identifier = "{}\t{}\t{}".format(uniq_row[0], uniq_row[1], uniq_row[5]) # 构建一个用于比较的唯一标识，将前三列合并为一个字符串
+            if match_result == "no match" and identifier not in written_data:  # 检查数据是否已经写入过
+                # 将数据写入文件
+                file.write("{}\t{}\t{}\t{}\t{}\n".format(uniq_row[0], uniq_row[1], uniq_row[5], uniq_row[6], uniq_row[7]))
+                # 将数据添加到集合中，表示已经写入
+                written_data.add(identifier)
+
